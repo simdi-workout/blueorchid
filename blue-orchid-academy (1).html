@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Orchid Beauty & Wellness Academy | Professional Beauty Courses Ludhiana</title>
+    <meta name="description" content="Blue Orchid Academy offers professional beauty courses and premium services like Microblading, Hydra Facial, Lash Lifting, and more. Enroll now to master the latest beauty techniques.">
+    <meta name="keywords" content="Beauty Academy, Microblading Course, Hydra Facial Training, Lash Lifting, Nail Art, Skincare Certification, Permanent Makeup, Beauty Services Ludhiana, Blue Orchid Academy">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blue Orchid Beauty & Wellness Academy">
+    <meta property="og:description" content="Enroll in our certified beauty courses and book premium services—Microblading, Hydra Facial, Lash Lifting, and more. Discover world-class training since 2022.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for Consistent Theme */
+        :root {
+            --primary-pink: #ec4899;
+            --primary-pink-light: #f9a8d4;
+            --primary-pink-dark: #db2777;
+            --secondary-purple: #8b5cf6;
+            --dark-navy: #14213D;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--bg-white);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+        p {
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            transition: var(--transition-normal);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-pink), var(--secondary-purple));
+            transition: width var(--transition-normal);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, var(--primary-pink-dark), var(--primary-pink));
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-pink);
+            border-radius: 2px;
+            transition: var(--transition-fast);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(236, 72, 153, 0.7)),
+                        url('https://images.pexels.com/photos/3373716/pexels-photo-3373716.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+            animation: gradientShift 8s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { filter: hue-rotate(0deg) brightness(0.7); }
+            50% { filter: hue-rotate(15deg) brightness(0.6); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition-normal);
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-pink);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, 10px); }
+        }
+
+        .scroll-indicator-icon {
+            width: 30px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator-icon::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: white;
+            border-radius: 2px;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { transform: translate(-50%, 0); opacity: 1; }
+            100% { transform: translate(-50%, 20px); opacity: 0; }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-header .highlight {
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Courses Section */
+        .courses {
+            background: var(--bg-light);
+        }
+
+        .course-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.65rem 1.75rem;
+            background: white;
+            color: var(--text-dark);
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            color: white;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .course-card-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .course-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .course-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .course-card p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .course-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+            color: var(--primary-pink);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .course-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #fbbf24;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            background: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+            overflow: hidden;
+        }
+
+        .reviews-container {
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .reviews-wrapper {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 2rem 1rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-pink) var(--bg-light);
+        }
+
+        .reviews-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .reviews-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+
+        .reviews-wrapper::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            border-radius: 10px;
+        }
+
+        .reviews-wrapper::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, var(--primary-pink-dark), var(--secondary-purple));
+        }
+
+        .review-card {
+            min-width: 350px;
+            max-width: 350px;
+            background: white;
+            border: 2px solid var(--bg-light);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            flex-shrink: 0;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-pink-light);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .reviewer-info {
+            flex: 1;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-light);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .scroll-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .scroll-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-md);
+        }
+
+        .scroll-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .scroll-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .overall-rating {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05));
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .rating-number {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-stars {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-count {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05));
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-pink-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-pink-light);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+
+        .social-link:hover {
+            background: var(--primary-pink);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* View All Button */
+        .view-all-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .btn-outline {
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--primary-pink);
+            color: var(--primary-pink);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-pink);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero {
+                height: 90vh;
+                margin-top: 70px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .courses-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        /* Utility Classes */
+        .fade-in {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        /* Smooth Scroll Offset for Fixed Header */
+        html {
+            scroll-padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Blue Orchid</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="cta-button" onclick="scrollToContact()">Enroll Now</button></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Discover Your Beauty Potential</h1>
+            <p>Professional beauty courses taught by industry experts at Blue Orchid Beauty & Wellness Academy. Transform your passion into a thriving career with our certified programs.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('courses')">Explore Courses</button>
+                <button class="btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-icon"></div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Featured</span> Courses</h2>
+                <p>Discover our professionally designed courses to help you master the latest beauty techniques and start your career in the beauty industry.</p>
+            </div>
+
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="nails">Nail Art</button>
+                <button class="filter-btn" data-filter="hair">Hair Styling</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="skincare">Skincare</button>
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card" data-category="nails">
+                    <div class="course-card-content">
+                        <div class="course-icon">💅</div>
+                        <h3>Nail Art Fundamentals</h3>
+                        <p>Basic skills and techniques for crafting creative, polished designs on fingernails using color, tools, and embellishments.</p>
+                        <span class="course-category">Nails</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.8</span>
+                            <span>(1,245 students)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="nails">
+                    <div class="course-card-content">
+                        <div class="course-icon">✨</div>
+                        <h3>Advanced Nail Techniques</h3>
+                        <p>Learn advanced nail art methods, including sculpting, extensions, and 3D designs for professional results.</p>
+                        <span class="course-category">Nails</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.9</span>
+                            <span>(876 students)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="hair">
+                    <div class="course-card-content">
+                        <div class="course-icon">💇</div>
+                        <h3>Modern Hair Styling</h3>
+                        <p>Techniques for cutting, coloring, and styling hair to achieve on-trend looks and creative transformations.</p>
+                        <span class="course-category">Hair</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.7</span>
+                            <span>(1,532 students)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="makeup">
+                    <div class="course-card-content">
+                        <div class="course-icon">💄</div>
+                        <h3>Professional Makeup</h3>
+                        <p>Master bridal and editorial makeup looks with step-by-step tutorials and live demonstrations.</p>
+                        <span class="course-category">Makeup</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.9</span>
+                            <span>(2,103 students)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="skincare">
+                    <div class="course-card-content">
+                        <div class="course-icon">🧴</div>
+                        <h3>Skincare Fundamentals</h3>
+                        <p>Understand skin types, product formulations, and daily routines for healthy, glowing skin.</p>
+                        <span class="course-category">Skincare</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.6</span>
+                            <span>(1,897 students)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="skincare">
+                    <div class="course-card-content">
+                        <div class="course-icon">🌸</div>
+                        <h3>Skin Cosmetology</h3>
+                        <p>Dive into advanced skin treatments, corrective makeup, and cosmetic chemistry for professionals.</p>
+                        <span class="course-category">Skin</span>
+                        <div class="course-stats">
+                            <span class="rating">★ 4.8</span>
+                            <span>(1,420 students)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <button class="btn-outline" onclick="scrollToContact()">View All Courses</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="highlight">Blue Orchid</span></h2>
+                <p>We offer the most comprehensive and affordable beauty education with a focus on practical skills and industry standards.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍🏫</div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with years of experience in the beauty industry and proven track records.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Flexible Learning</h3>
+                    <p>Access course materials anytime, anywhere. Learn at your own pace with our structured curriculum.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✋</div>
+                    <h3>Hands-on Practice</h3>
+                    <p>Apply what you learn with practical exercises and real-world projects to build your portfolio.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Industry Certification</h3>
+                    <p>Earn recognized certificates that validate your skills and boost your career prospects in the beauty industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our <span class="highlight">Students</span> Say</h2>
+                <p>See why our students love learning at Blue Orchid Academy</p>
+            </div>
+
+            <div class="overall-rating">
+                <div class="rating-number">5.0</div>
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-count">Based on 46 Google Reviews</div>
+            </div>
+
+            <div class="reviews-container">
+                <div class="reviews-wrapper" id="reviewsWrapper">
+                    <!-- Review Card 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">P</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Palak</div>
+                                <div class="review-date">1 month ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">Very nyc....i loved it...she was so humble and well expertised. I love her wrk</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">I</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Ishmeet Kaur</div>
+                                <div class="review-date">2 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">I visited here after being recommended by a friend and the work is very neat and nice with super affordable prices and the environment is also very friendly....must visit highly recommended ❤️</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">C</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Chesta</div>
+                                <div class="review-date">5 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">The environment is quite nice here. I love this place as a student I have learnt alot here. The way of talking is very nice and the staff here is very kind and adoreable✨✨</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">P</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Parishi Arora</div>
+                                <div class="review-date">5 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">There work is very nice and the staff as well is very polite and professional, will definitely visit again. I am learning nails as well from them and the teachers are highly trained and professional. Love their services.</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 5 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">P</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Parimita Thakur</div>
+                                <div class="review-date">1 month ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">Very nice services.....very friendly environment and good faculties.....so good 😊💯</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 6 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">G</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Gurliv Kaur Makkar</div>
+                                <div class="review-date">5 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">Very nice experience, the staffs were very polite too ❤️, their nail art and skin courses were fun to learn.. good quality and affordable prices of nail art 😊</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 7 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">M</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Muskxnn</div>
+                                <div class="review-date">10 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">Excellent services friendly staff and very comfortable atmosphere ✨❤️</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 8 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">G</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Gauri Bhatia</div>
+                                <div class="review-date">1 month ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">I liked my nail and staff is also very friendly</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 9 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">N</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Neha Chawla</div>
+                                <div class="review-date">1 month ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">Best service at reasonable price</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+
+                    <!-- Review Card 10 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">M</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Mukti Thapar</div>
+                                <div class="review-date">6 months ago</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">The experience was very nice as a student. The environment was very good as well as the teachers.</p>
+                        <div class="google-badge">
+                            <span>📍</span> Posted on Google
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-buttons">
+                    <button class="scroll-btn" id="scrollLeft" onclick="scrollReviews('left')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroll-btn" id="scrollRight" onclick="scrollReviews('right')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header">
+                    <h2>Ready to <span class="highlight">Book Your Course?</span></h2>
+                    <p>Submit your booking request and our team will review it shortly. We'll contact you within 24 hours to confirm your enrollment!</p>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="instagram">Instagram (Optional)</label>
+                            <input type="text" id="instagram" name="instagram" placeholder="@yourusername">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course">Interested Course *</label>
+                            <select id="course" name="course" required>
+                                <option value="">Select a course</option>
+                                <option value="Professional Nail Art">Professional Nail Art</option>
+                                <option value="Advanced Hair Styling">Advanced Hair Styling</option>
+                                <option value="Professional Makeup Artistry">Professional Makeup Artistry</option>
+                                <option value="Skincare Specialist">Skincare Specialist</option>
+                                <option value="Permanent Makeup">Permanent Makeup</option>
+                                <option value="Microblading">Microblading</option>
+                                <option value="Lash Lifting">Lash Lifting</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Any questions or special requirements?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Blue Orchid Academy</h3>
+                    <p>Empowering beauty enthusiasts with professional skills and knowledge to excel in the beauty industry since 2022.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/blueorchidacademyy/" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@BlueOrchidBeauty" target="_blank" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>240R, 2nd Floor, Model Town<br>Krishna Hospital Road<br>Ludhiana, Punjab</p>
+                    <p><strong>Email:</strong><br><a href="/cdn-cgi/l/email-protection#42002e37276c2d30212a2b266c2023356c23212326272f3b02252f232b2e6c212d2f"><span class="__cf_email__" data-cfemail="41032d34246f2e33222928256f2320366f20222025242c3801262c20282d6f222e2c">[email&#160;protected]</span></a></p>
+                    <p><strong>Phone:</strong><br>+91 96721 28525<br>+91 75270 85150</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blue Orchid Beauty & Wellness Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Smooth Scroll Functions
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToContact() {
+            scrollToSection('contact');
+        }
+
+        // Horizontal Scroll for Reviews (Global Function)
+        function scrollReviews(direction) {
+            const wrapper = document.getElementById('reviewsWrapper');
+            if (!wrapper) return;
+            
+            const scrollAmount = 400; // pixels to scroll
+            
+            if (direction === 'left') {
+                wrapper.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else {
+                wrapper.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Course Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                courseCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        const category = card.getAttribute('data-category');
+                        if (category === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => card.style.opacity = '1', 10);
+                        } else {
+                            card.style.opacity = '0';
+                            setTimeout(() => card.style.display = 'none', 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Form Submission Handler - Redirect to Instagram DMs
+        function handleFormSubmit(event) {
+            console.log('Form submitted!'); // Debug log
+            event.preventDefault();
+            
+            try {
+                // Get form data
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const instagram = document.getElementById('instagram').value;
+                const course = document.getElementById('course').value;
+                const message = document.getElementById('message').value;
+
+                console.log('Form data:', { name, phone, instagram, course, message }); // Debug log
+
+                // Validate required fields
+                if (!name || !phone || !course) {
+                    alert('Please fill in your name, phone number, and select a course');
+                    return;
+                }
+
+                // Disable submit button to prevent double submission
+                const submitBtn = event.target.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                // Create Discord embed message
+                const webhookUrl = 'https://discord.com/api/webhooks/1457062067243712624/_DxMr2SMss_imNZ95fLVN69f8JjJl3v-NEVPgS8ejtH5nL0PS7iDlDFhYEO0ivlXEWxs';
+                
+                const currentDate = new Date().toLocaleString('en-IN', { 
+                    timeZone: 'Asia/Kolkata',
+                    dateStyle: 'full',
+                    timeStyle: 'short'
+                });
+
+                const discordPayload = {
+                    embeds: [{
+                        title: "🎓 New Course Booking Request",
+                        color: 15418782, // Pink color (#ec4899)
+                        fields: [
+                            {
+                                name: "👤 Name",
+                                value: name,
+                                inline: true
+                            },
+                            {
+                                name: "📱 Phone",
+                                value: phone,
+                                inline: true
+                            },
+                            {
+                                name: "📸 Instagram",
+                                value: instagram || "Not provided",
+                                inline: true
+                            },
+                            {
+                                name: "💅 Course",
+                                value: course,
+                                inline: false
+                            }
+                        ],
+                        footer: {
+                            text: "Blue Orchid Beauty & Wellness Academy"
+                        },
+                        timestamp: new Date().toISOString()
+                    }]
+                };
+
+                // Add message field if provided
+                if (message) {
+                    discordPayload.embeds[0].fields.push({
+                        name: "💬 Additional Message",
+                        value: message,
+                        inline: false
+                    });
+                }
+
+                // Send to Discord webhook
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(discordPayload)
+                })
+                .then(response => {
+                    console.log('Webhook response:', response); // Debug log
+                    
+                    if (response.ok || response.status === 204) {
+                        // Success
+                        alert('✅ Booking request submitted successfully!\n\nThank you for your interest, ' + name + '!\n\nYour booking request has been received and will be reviewed by our team. We will contact you shortly at ' + phone + ' to confirm your enrollment.\n\nFor urgent inquiries, you can also reach us at:\n📧 blue.orchid.baw.academy@gmail.com\n📱 +91 96721 28525');
+                        
+                        // Reset form
+                        event.target.reset();
+                    } else {
+                        throw new Error('Webhook failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Webhook error:', error); // Debug log
+                    alert('❌ There was an error submitting your booking. Please contact us directly:\n\n📧 blue.orchid.baw.academy@gmail.com\n📱 +91 96721 28525\n📱 +91 75270 85150');
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Booking Request';
+                });
+                
+            } catch (error) {
+                console.error('Form submit error:', error); // Debug log
+                alert('An error occurred. Please contact us directly at:\n📧 blue.orchid.baw.academy@gmail.com\n📱 +91 96721 28525');
+            }
+        }
+
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.course-card, .feature-card, .section-header').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Auto-scroll reviews (optional - remove if you don't want)
+        let autoScrollInterval;
+        function startAutoScroll() {
+            const wrapper = document.getElementById('reviewsWrapper');
+            autoScrollInterval = setInterval(() => {
+                // Check if we're at the end
+                if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 10) {
+                    // Scroll back to start
+                    wrapper.scrollTo({
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Scroll right
+                    wrapper.scrollBy({
+                        left: 400,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 5000); // Auto-scroll every 5 seconds
+        }
+
+        // Stop auto-scroll when user interacts
+        const reviewsWrapper = document.getElementById('reviewsWrapper');
+        if (reviewsWrapper) {
+            reviewsWrapper.addEventListener('mouseenter', () => {
+                clearInterval(autoScrollInterval);
+            });
+
+            reviewsWrapper.addEventListener('mouseleave', () => {
+                startAutoScroll();
+            });
+
+            // Start auto-scroll on page load
+            startAutoScroll();
+        }
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        if (reviewsWrapper) {
+            reviewsWrapper.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            reviewsWrapper.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left
+                scrollReviews('right');
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right
+                scrollReviews('left');
+            }
+        }
+    </script>
+</body>
+</html>
