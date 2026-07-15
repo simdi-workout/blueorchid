@@ -196,10 +196,16 @@
     font-weight: 700;
     font-size: 13px;
     color: #fff;
-    background: var(--gold);
+    background: var(--gold); /* default / A grade */
   }
-  .grade-pill.plus { background: #a9812f; }
-  .grade-pill.b { background: #8c7a5e; }
+  /* Grade pill color variants — edit these to change grade colors.
+     Add class="grade-pill <letter>" to a pill to use one. */
+  .grade-pill.plus { background: #a9812f; }  /* A+  — deep gold */
+  .grade-pill.a    { background: #c9a24a; }  /* A   — gold */
+  .grade-pill.b    { background: #8c7a5e; }  /* B   — bronze/taupe */
+  .grade-pill.c    { background: #6f8c6e; }  /* C   — sage green */
+  .grade-pill.d    { background: #c07a3e; }  /* D   — burnt orange */
+  .grade-pill.f    { background: #8b2f2f; }  /* F   — deep red */
 
   .footnote {
     margin-top: 34px;
@@ -264,7 +270,7 @@
   <h2 class="title">Certificate on Record</h2>
   <p class="lede">This certificate number matches a record in our registry. Details are shown exactly as issued.</p>
 
-  <div class="card">
+  <div class="card" id="certCard">
     <span class="found-badge">&#10003; VERIFIED</span>
     <p class="card-label">CERTIFICATE NO.</p>
 
@@ -273,7 +279,7 @@
       <div class="detail-row"><span class="k">Name</span><span class="v">SHIVANI</span></div>
       <div class="detail-row"><span class="k">Father's Name</span><span class="v">RAJESH KUMAR</span></div>
       <div class="detail-row"><span class="k">Date of Issue</span><span class="v">30/01/2026</span></div>
-      <div class="detail-row"><span class="k">Course</span><span class="v">Nail Art &amp; Eyelashes</span></div>
+      <div class="detail-row"><span class="k">Course</span><span class="v">NAIL ART &amp; EYELASHES</span></div>
     </div>
 
     <div class="subjects-panel">
@@ -311,14 +317,14 @@
     </div>
   </div>
 
-  <button class="download-btn" onclick="window.print()">
+  <a class="download-btn" id="downloadBtn" href="BO-LDH-011.png" download="BO-LDH-011-certificate.png">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 3v12"/>
       <path d="M7 10l5 5 5-5"/>
       <path d="M5 21h14"/>
     </svg>
-    Download Certificate
-  </button>
+    <span id="downloadLabel">Download Certificate</span>
+  </a>
 
   <p class="footnote">Looks up <code>/certificates/{code}.html</code> on this site. Add a page there for each certificate you issue — if it isn't found, this page tells the visitor it doesn't exist.</p>
 
