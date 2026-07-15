@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://blueorchid.site.je/sitemap.xml
+Sitemap: https://blueorchidin.github.io/sitemap.xml
 
 # Disallow admin or private directories (if any)
 # Disallow: /admin/
