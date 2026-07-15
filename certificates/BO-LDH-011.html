@@ -1,7 +1,328 @@
-<html>
-  <header>
-    <title>
-      hho
-    </title>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificate Verification | Blue Orchid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5efe1;
+    --cream-2: #efe7d4;
+    --maroon: #5c1a34;
+    --maroon-deep: #4a1329;
+    --gold: #c9a24a;
+    --gold-soft: #d9bd7e;
+    --ink: #3a2e28;
+    --ink-soft: #6f6155;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(201,162,74,0.07), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(92,26,52,0.06), transparent 45%);
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    padding: 70px 20px 90px;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mark {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 22px;
+    color: var(--maroon);
+  }
+
+  h1.brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--maroon);
+    margin: 0 0 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .est {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    margin: 0 0 40px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin: 0 10px 3px;
+  }
+
+  h2.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--maroon-deep);
+    margin: 0 0 16px;
+  }
+
+  .lede {
+    font-size: 15px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: linear-gradient(180deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+    border-radius: 14px;
+    padding: 34px 36px 30px;
+    text-align: left;
+    box-shadow: 0 20px 45px rgba(74, 19, 41, 0.28);
+    border: 1px solid rgba(201,162,74,0.35);
+  }
+
+  .card-label {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    color: var(--gold-soft);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+
+  .found-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201,162,74,0.16);
+    border: 1px solid rgba(201,162,74,0.5);
+    color: var(--gold-soft);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .detail-panel {
+    background: var(--cream);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 18px;
+    border-bottom: 1px solid rgba(92,26,52,0.09);
+    font-size: 14.5px;
+    gap: 20px;
+  }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-row .k {
+    color: var(--ink-soft);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .detail-row .v {
+    color: var(--maroon-deep);
+    font-weight: 600;
+    text-align: right;
+  }
+  .detail-row.certno .v {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+  }
+
+  .subjects-panel {
+    background: var(--cream);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  table.subjects {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.subjects th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--ink-soft);
+    font-weight: 600;
+    padding: 14px 18px 10px;
+    border-bottom: 1px solid rgba(92,26,52,0.12);
+  }
+  table.subjects th:not(:first-child), table.subjects td:not(:first-child) {
+    text-align: center;
+  }
+  table.subjects td {
+    padding: 12px 18px;
+    font-size: 14.5px;
+    border-bottom: 1px solid rgba(92,26,52,0.07);
+    color: var(--ink);
+  }
+  table.subjects tr:last-child td { border-bottom: none; }
+  table.subjects td:first-child { font-weight: 600; color: var(--maroon-deep); }
+
+  .grade-pill {
+    display: inline-block;
+    min-width: 26px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    background: var(--gold);
+  }
+  .grade-pill.plus { background: #a9812f; }
+  .grade-pill.b { background: #8c7a5e; }
+
+  .footnote {
+    margin-top: 34px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+  .footnote code {
+    background: rgba(92,26,52,0.08);
+    color: var(--maroon-deep);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 12.5px;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 28px;
+    background: var(--gold);
+    color: var(--maroon-deep);
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    letter-spacing: 0.3px;
+    padding: 13px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(201,162,74,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .download-btn:hover {
+    background: var(--gold-soft);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(201,162,74,0.4);
+  }
+  .download-btn:active { transform: translateY(0); }
+  .download-btn svg { width: 16px; height: 16px; }
+
+  @media print {
+    body { padding: 0; background: #fff; }
+    .footnote, .download-btn { display: none; }
+    .card { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <svg class="mark" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2c1.5 2.5 1.5 5-0.5 6.5C13.5 7 15.5 6.5 18 8c-2 1-2.5 3-1 5-2.5 0-4-1.5-4.5-4C11 11.5 9.5 13 7 13c1.5-2 1-4-1-5 2.5-1.5 4.5-1 6.5 1.5C10.5 7 10.5 4.5 12 2z"/>
+    <circle cx="12" cy="15.5" r="1.6"/>
+  </svg>
+
+  <h1 class="brand">Blue Orchid Beauty &amp; Wellness Academy</h1>
+  <p class="est">est. 2022 — Ludhiana</p>
+
+  <p class="eyebrow">CERTIFICATE REGISTRY</p>
+  <h2 class="title">Certificate on Record</h2>
+  <p class="lede">This certificate number matches a record in our registry. Details are shown exactly as issued.</p>
+
+  <div class="card">
+    <span class="found-badge">&#10003; VERIFIED</span>
+    <p class="card-label">CERTIFICATE NO.</p>
+
+    <div class="detail-panel">
+      <div class="detail-row certno"><span class="k">Certificate No.</span><span class="v">BO-LDH-011</span></div>
+      <div class="detail-row"><span class="k">Name</span><span class="v">SHIVANI</span></div>
+      <div class="detail-row"><span class="k">Father's Name</span><span class="v">RAJESH KUMAR</span></div>
+      <div class="detail-row"><span class="k">Date of Issue</span><span class="v">30/01/2026</span></div>
+      <div class="detail-row"><span class="k">Course</span><span class="v">Nail Art &amp; Eyelashes</span></div>
+    </div>
+
+    <div class="subjects-panel">
+      <table class="subjects">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hair Services</td>
+            <td><span class="grade-pill">A+</span></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Beauty Services</td>
+            <td><span class="grade-pill">A+</span></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Make Up</td>
+            <td><span class="grade-pill b">A+</span></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Mehandi Designing</td>
+            <td><span class="grade-pill plus">A+</span></td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <button class="download-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12"/>
+      <path d="M7 10l5 5 5-5"/>
+      <path d="M5 21h14"/>
+    </svg>
+    Download Certificate
+  </button>
+
+  <p class="footnote">Looks up <code>/certificates/{code}.html</code> on this site. Add a page there for each certificate you issue — if it isn't found, this page tells the visitor it doesn't exist.</p>
+
+</div>
+
+</body>
 </html>
